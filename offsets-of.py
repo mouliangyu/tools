@@ -13,7 +13,7 @@ class Offsets(gdb.Command):
 
         print argv[0], '{'
         for field in stype.fields():
-            print '    [0x%x] %s' % (field.bitpos//8, field.name)
+            print '    [0x%x] %s (%s)' % (field.bitpos//8, field.name, field.type)
         print '}'
 
 Offsets()
